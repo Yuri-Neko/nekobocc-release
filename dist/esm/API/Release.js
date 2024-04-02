@@ -12,6 +12,9 @@ export const release = async (page = 1) => {
     const $ = load(res.data);
     const array = [];
     $('div.result div.top').each((_i, e) => {
+        const img = $(e).find('div.limitnjg > img').attr('src');
+        const title = $(e).find('h2 > a').text();
+        const url = $(e).find('h2 > a').attr('href');
         const desc = $(e).find('.desc').text();
         const matchSinopsis = desc.match(/Sinopsis:(.*)Genre:/);
         const sinopsis = matchSinopsis ? matchSinopsis[1].trim() : "Sinopsis tidak tersedia";
