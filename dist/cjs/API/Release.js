@@ -21,15 +21,19 @@ const release = async (page = 1) => {
         const img = $(e).find('div.limitnjg > img').attr('src');
         const title = $(e).find('h2 > a').text();
         const url = $(e).find('h2 > a').attr('href');
-    
-        // Tambahan untuk mendapatkan sinopsis, genre, dan durasi
-        const sinopsis = $(e).find('.desc p').first().text().trim() || "Sinopsis tidak tersedia";
-        const genre = $(e).find('.desc b:contains("Genre")').next().text().trim() || "Genre tidak tersedia";
-        const anime = $(e).find('.desc b:contains("Anime")').next().text().trim() || "Anime tidak tersedia";
-        const producers = $(e).find('.desc b:contains("Producers")').next().text().trim() || "Producers tidak tersedia";
-        const duration = $(e).find('.desc b:contains("Duration")').next().text().trim() || "Durasi tidak tersedia";
-        const size = $(e).find('.desc p:contains("Size")').text().trim() || "Size tidak tersedia";
-        const catatan = $(e).find('.desc h3').text().trim() || "Catatan tidak tersedia";
+       
+        const desc = $(e).find('.desc').text();
+        const matchSinopsis = desc.match(/Sinopsis:(.*)Genre:/);
+        const sinopsis = matchSinopsis ? matchSinopsis[1].trim() : "Sinopsis tidak tersedia";
+
+        const matchGenre = desc.match(/Genre :(.*)Anime :/);
+        const genre = matchGenre ? matchGenre[1].trim() : "Genre tidak tersedia";
+
+        const matchDuration = desc.match(/Duration :(.*)Size/);
+        const duration = matchDuration ? matchDuration[1].trim() : "Durasi tidak tersedia";
+
+        const matchProducers = desc.match(/Producers :(.*)Duration/);
+        const producers = matchProducers ? matchProducers[1].trim() : "Produser tidak tersedia";
         
         array.push({
             img,
@@ -37,11 +41,8 @@ const release = async (page = 1) => {
             url,
             sinopsis,
             genre,
-            anime,
             producers,
-            duration,
-            size,
-            catatan
+            duration
         });
     });
     return array;
