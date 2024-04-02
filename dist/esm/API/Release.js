@@ -16,8 +16,11 @@ export const release = async (page = 1) => {
         const title = $(e).find('h2 > a').text();
         const url = $(e).find('h2 > a').attr('href');
         const desc = $(e).find('.desc').text();
-        const matchSinopsis = desc.match(/Sinopsis:(.*)Genre:/);
-        const sinopsis = matchSinopsis ? matchSinopsis[1].trim() : "Sinopsis tidak tersedia";
+        const sinopsisElement = $(e).find('.desc p:contains("Sinopsis")');
+        let sinopsis = "Sinopsis tidak tersedia";
+        if (sinopsisElement.length > 0) {
+          sinopsis = sinopsisElement.next('p').text().trim();
+        }
 
         const matchGenre = desc.match(/Genre :(.*)Anime :/);
         const genre = matchGenre ? matchGenre[1].trim() : "Genre tidak tersedia";
