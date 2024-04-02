@@ -15,12 +15,17 @@ export const release = async (page = 1) => {
         const img = $(e).find('div.limitnjg > img').attr('src');
         const title = $(e).find('h2 > a').text();
         const url = $(e).find('h2 > a').attr('href');
-        const description = $(e).find('.desc').text();
+        const sinopsis = $(e).find('.desc p').first().text();
+        const genre = $(e).find('.desc b:contains("Genre")').next().text();
+        const durasi = $(e).find('.desc b:contains("Duration")').next().text();
+        
         array.push({
             img,
             title,
-            url,
-            description
+            sinopsis,
+            genre,
+            durasi,
+            url
         });
     });
     return array;
