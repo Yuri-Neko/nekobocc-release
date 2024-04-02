@@ -24,6 +24,7 @@ const release = async (page = 1) => {
         const sinopsis = $(e).find('.desc p').first().text();
         const genre = $(e).find('.desc b:contains("Genre")').next().text();
         const durasi = $(e).find('.desc b:contains("Duration")').next().text();
+        const description = $(e).find('.desc').text();
         
         array.push({
             img,
@@ -31,7 +32,8 @@ const release = async (page = 1) => {
             sinopsis,
             genre,
             durasi,
-            url
+            url,
+            description
         });
     });
     return array;
