@@ -30,3 +30,7 @@ export const release = async (page = 1) => {
     });
     return array;
 };
+
+
+//YANG COMOT UDA GW RECODE GW SUMPAHIN MATI
+//THANKS SlavyanDesu untuk base nya gw recode ulang, yng comot tanpa credit gw sama  SlavyanDesu gw [Kyouka] sumpahin mati anjing
