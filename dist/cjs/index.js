@@ -12,6 +12,9 @@ class NekoBocc {
     release(page) {
         return (0, index_js_1.release)(page);
     }
+    latest(page) {
+        return (0, index_js_1.latest)(page);
+    }
     /**
      * Get search result.
      *

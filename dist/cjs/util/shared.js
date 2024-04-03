@@ -11,6 +11,7 @@ exports.header = {
 };
 exports.endpoints = {
     latest: '/category/hentai/page/__PAGE',
+    last: '/page/__PAGE',
     search: '/search/__QUERY',
     random: '/random'
 };

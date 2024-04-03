@@ -1,4 +1,4 @@
-import type { HentaiRelease, HentaiMetadata, EpisodeMetadata } from './util/interfaces.js';
+import type { HentaiRelease, HentaiMetadata, EpisodeMetadata, NekoPoiLatest } from './util/interfaces.js';
 export default class NekoBocc {
     /**
      * Get list of released hentai.
@@ -7,6 +7,7 @@ export default class NekoBocc {
      * @returns {Promise<HentaiRelease[]>} Array object of latest release.
      */
     release(page?: number): Promise<HentaiRelease[]>;
+    latest(page?: number): Promise<NekoPoiLatest[]>;
     /**
      * Get search result.
      *

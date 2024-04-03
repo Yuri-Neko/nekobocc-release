@@ -1,4 +1,15 @@
 export interface HentaiRelease {
+    img?: string;
+    title?: string;
+    url?: string;
+    sinopsis?: string;
+    genre?: string;
+    producers?: string;
+    duration?: string;
+    id?: string;
+}
+
+export interface NekoPoiLatest {
     /**
      * Thumbnail URL of post.
      */

@@ -1,4 +1,4 @@
-import { release, search, get, random } from './API/index.js';
+import { release, search, get, random, latest } from './API/index.js';
 import { valid } from './util/shared.js';
 export default class NekoBocc {
     /**
@@ -9,6 +9,9 @@ export default class NekoBocc {
      */
     release(page) {
         return release(page);
+    }
+    latest(page) {
+        return latest(page);
     }
     /**
      * Get search result.

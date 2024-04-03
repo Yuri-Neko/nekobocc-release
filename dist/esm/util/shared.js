@@ -7,6 +7,7 @@ export const header = {
 };
 export const endpoints = {
     latest: '/category/hentai/page/__PAGE',
+    last: '/page/__PAGE',
     search: '/search/__QUERY',
     random: '/random'
 };

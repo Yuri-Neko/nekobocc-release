@@ -8,5 +8,6 @@ export declare const header: {
 export declare const endpoints: {
     latest: string;
     search: string;
+    last: string;
     random: string;
 };
