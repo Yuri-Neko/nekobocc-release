@@ -46,14 +46,24 @@ nekobocc.release()
 ```js
 [
     {
-        img: 'https://nekopoi.care/wp-content/uploads/2023/01/vlcsnap-2023-01-15-03h18m12s053-300x169.png',
-        title: '[L2D] Bocchi-chan Maid Service by Consome',
-        link: 'https://nekopoi.care/l2d-bocchi-chan-maid-service-by-consome/'
+      "img": "https://nekopoi.care/wp-content/uploads/2024/04/vlcsnap-2024-04-02-22h26m56s012-300x170.png",
+      "title": "[NEW Release] Shunka Shuutou Episode 2 Subtitle Indonesia",
+      "url": "https://nekopoi.care/new-release-shunka-shuutou-episode-2-subtitle-indonesia/",
+      "sinopsis": "Menceritakan tentang Miharu Aragaki, cewek SMA yang cantik, teladan, ramah, montok, dan idaman para cowok. Dia setiap hari sering ditembak oleh cowok, tapi tidak ada satu pun yang ia terima. Dibalik itu, dia merasa khawatir karena banyak chat yang mengganggu dan ia juga direkam diam-diam. Seketika dia mendapatkan tawaran untuk dibantu solusi dari semua masalahnya itu oleh guru pembimbing, Sasahara Shiki. Namun, bimbingan yang ia dapat sangat mengejutkannya…",
+      "genre": "Big Oppai, Blowjob, Oral, Schoolgirl, Virgin",
+      "producers": "nur",
+      "duration": "20 menit",
+      "id": "new-release-shunka-shuutou-episode-2-subtitle-indonesia/"
     },
     {
-        img: 'https://nekopoi.care/wp-content/uploads/2023/01/vlcsnap-2023-01-15-00h06m41s977-300x169.png',
-        title: '[NEW Release] Kemonokko Tsuushin The Animation Episode 2 Subtitle Indonesia',
-        link: 'https://nekopoi.care/kemonokko-tsuushin-the-animation-episode-2-subtitle-indonesia/'
+      "img": "https://nekopoi.care/wp-content/uploads/2024/04/vlcsnap-2024-04-02-18h24m40s356-300x170.png",
+      "title": "[NEW Release] Kotowarenai Haha Episode 1 Subtitle Indonesia",
+      "url": "https://nekopoi.care/new-release-kotowarenai-haha-episode-1-subtitle-indonesia/",
+      "sinopsis": "Yuu dan Kousuke adalah teman sekelas, mereka selalu bermain ke rumah Kousuke sehabis pulang sekolah, saat Yuu ingin mengembalikan piring kotor kepada Ibu Kousuke, tiba-tiba Ibu Kousuke jatuh dari tangga dan secara reflek Yuu menahannya dan membuat tangannya cedera, dengan waktu penyembuhan itu kedua tangan Yuu tidak bisa digunakan oleh karena itu, segala kebutuhan dari mandi, makan, sampai pipis dibantu oleh Ibu Kousuke.",
+      "genre": "Big Oppai, Blowjob, Creampie, Masturbation, MILF, Paizuri, Romance",
+      "producers": "QueenBee",
+      "duration": "20 menit",
+      "id": "new-release-kotowarenai-haha-episode-1-subtitle-indonesia/"
     }
     ...
 ]
