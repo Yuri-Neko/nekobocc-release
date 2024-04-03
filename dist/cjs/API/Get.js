@@ -58,8 +58,10 @@ const get = async (url) => {
         const array = [];
         $('div.liner').each((_i, e) => {
             quality.push($(e).find('div.name').text());
-            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            download.push($(e).find('a').last().attr('href'));
+            download.push({ 
+                quality: $(e).find('div.name').text(), // Assuming quality text is used for both quality and URL
+                url: $(e).find('a').last().attr('href')
+            });
         });
         $('div.konten p').each((_i, e) => {
             array.push({ text: $(e).text() });
