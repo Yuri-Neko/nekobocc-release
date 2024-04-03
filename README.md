@@ -125,6 +125,13 @@ Get list of released hentai.
 <br>
 return a `HentaiRelease`
 
+**nekobocc.latest([page])**
+- `page` Page number to be shown, this parameter is optional. Default is `1`.
+
+Get list of released NekoPoi All.
+<br>
+return a `NekoPoiLatest`
+
 **nekobocc.search(query)**
 - `query` is a `string` and you need to pass it, otherwise will resulting an error.
 
