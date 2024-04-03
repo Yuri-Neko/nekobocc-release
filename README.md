@@ -13,7 +13,7 @@
 
 ## Installation
 ```sh
-$ npm install nekobocc
+$ npm install nekobocc-v2
 ```
 
 ## Loading and configuring the module
@@ -21,19 +21,19 @@ As of v1.3.x this module now support both ESM and CommonJS.
 
 ### ES Modules (ESM)
 ```js
-import NekoBocc from 'nekobocc';
+import NekoBocc from 'nekobocc-v2';
 const nekobocc = new NekoBocc();
 ```
 
 ### CommonJS
 ```js
-const NekoBocc = require('nekobocc').default;
+const NekoBocc = require('nekobocc-v2').default;
 const nekobocc = new NekoBocc();
 ```
 
 ## Example
 ```js
-import NekoBocc from 'nekobocc';
+import NekoBocc from 'nekobocc-v2';
 const nekobocc = new NekoBocc();
 
 // Get list of released hentai.
