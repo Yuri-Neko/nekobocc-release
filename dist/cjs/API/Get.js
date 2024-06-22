@@ -19,7 +19,7 @@ const get = async (url) => {
     const $ = (0, cheerio_1.load)(res.data);
 
     // Check if the URL includes "jav-cosplay-" and scrape the required data
-    if (url.includes("jav-cosplay-")) {
+    if (url.includes("/jav-")) {
         const title = $('h1[style="line-height: 20px;font-size: 15px;width: 100%;float:none"]').text();
         const viewsAndDate = $('p[style="font-size: 13px;line-height: 14px;margin: 3px 0px;"]').text();
         const img = $('div.thm img').attr('src');
