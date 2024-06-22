@@ -7,15 +7,84 @@ exports.get = void 0;
 const axios_1 = __importDefault(require("axios"));
 const cheerio_1 = require("cheerio");
 const shared_js_1 = require("../util/shared.js");
+
 /**
- * Get metadata of episode or hentai page from a valid URL.
+ * Get metadata of episode, hentai, or JAV page from a valid URL.
  *
- * @param {string} url - Nekopoi episode or hentai page URL.
- * @returns {Promise<HentaiMetadata | EpisodeMetadata>} Object of episode or hentai metadata.
+ * @param {string} url - Nekopoi episode, hentai, or JAV page URL.
+ * @returns {Promise<HentaiMetadata | EpisodeMetadata | JavMetadata>} Object of episode, hentai, or JAV metadata.
  */
 const get = async (url) => {
     const res = await axios_1.default.get(url, shared_js_1.header);
     const $ = (0, cheerio_1.load)(res.data);
+
+    // Check if the URL includes "jav-cosplay-" and scrape the required data
+    if (url.includes("/jav-")) {
+        const title = $('h1[style="line-height: 20px;font-size: 15px;width: 100%;float:none"]').text();
+        const viewsAndDate = $('p[style="font-size: 13px;line-height: 14px;margin: 3px 0px;"]').text();
+        const img = $('div.thm img').attr('src');
+        const producers = $('p:contains("Producers")').text().replace('Producers : ', '');
+        const artist = $('p:contains("Artist")').text().replace('Artist : ', '');
+        const genre = $('p:contains("Genre")').text().replace('Genre :', '').trim();
+        const duration = $('p:contains("Duration")').text().replace('Duration :', '').trim();
+        const downloadLinks = [];
+        $('div.liner').each((_i, e) => {
+            const quality = $(e).find('div.name').text();
+            const links = [];
+            $(e).find('a').each((_j, link) => {
+                links.push($(link).attr('href'));
+            });
+            downloadLinks.push({ quality, links });
+        });
+
+        const result = {
+            title: title,
+            viewsAndDate: viewsAndDate,
+            img: img,
+            producers: producers,
+            artist: artist,
+            genre: genre,
+            duration: duration,
+            downloadLinks: downloadLinks
+        };
+
+        return result;
+    }
+
+    // Check if the URL includes "/3d-" and scrape the required data
+    if (url.includes("/3d-")) {
+        const title = $('h1[style="line-height: 20px;font-size: 15px;width: 100%;float:none"]').text();
+        const viewsAndDate = $('p[style="font-size: 13px;line-height: 14px;margin: 3px 0px;"]').text();
+        const img = $('div.thm img').attr('src');
+        const parody = $('p:contains("Parody")').text().replace('Parody : ', '');
+        const producers = $('p:contains("Producers")').text().replace('Producers :', '').trim();
+        const duration = $('p:contains("Duration")').text().replace('Duration : ', '').trim();
+        const sizes = $('p:contains("Size")').text().replace('Size : ', '').trim();
+        const downloadLinks = [];
+        $('div.liner').each((_i, e) => {
+            const quality = $(e).find('div.name').text();
+            const links = [];
+            $(e).find('a').each((_j, link) => {
+                links.push($(link).attr('href'));
+            });
+            downloadLinks.push({ quality, links });
+        });
+
+        const result = {
+            title: title,
+            viewsAndDate: viewsAndDate,
+            img: img,
+            parody: parody,
+            producers: producers,
+            duration: duration,
+            sizes: sizes,
+            downloadLinks: downloadLinks
+        };
+
+        return result;
+    }
+
+    // Original scraping logic for other URLs
     if (url.includes('/hentai/')) {
         const img = $('div.imgdesc').find('img').attr('src');
         const title = $('title').text();
@@ -24,7 +93,6 @@ const get = async (url) => {
         const url = [];
         let episode;
         $('div.episodelist > ul > li').each((_i, e) => {
-            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             url.push($(e).find('a').attr('href'));
             episode = url.length;
         });
@@ -49,8 +117,7 @@ const get = async (url) => {
             url: url
         };
         return result;
-    }
-    else {
+    } else {
         const img = $('div.thm').find('img').attr('src');
         const title = $('title').text();
         const quality = [];
@@ -59,7 +126,7 @@ const get = async (url) => {
         $('div.liner').each((_i, e) => {
             quality.push($(e).find('div.name').text());
             download.push({ 
-                quality: $(e).find('div.name').text(), // Assuming quality text is used for both quality and URL
+                quality: $(e).find('div.name').text(), 
                 url: $(e).find('a').last().attr('href')
             });
         });
