@@ -19,7 +19,7 @@ const get = async (url) => {
     const $ = (0, cheerio_1.load)(res.data);
 
     // Check if the URL includes "jav-cosplay-" and scrape the required data
-    if (url.includes("/jav-")) {
+    if (url.includes("jav-cosplay-")) {
         const title = $('h1[style="line-height: 20px;font-size: 15px;width: 100%;float:none"]').text();
         const viewsAndDate = $('p[style="font-size: 13px;line-height: 14px;margin: 3px 0px;"]').text();
         const img = $('div.thm img').attr('src');
@@ -78,6 +78,35 @@ const get = async (url) => {
             producers: producers,
             duration: duration,
             sizes: sizes,
+            downloadLinks: downloadLinks
+        };
+
+        return result;
+    }
+
+    // Check if the URL includes "/pv-" and scrape the required data
+    if (url.includes("/pv-")) {
+        const title = $('h1[style="line-height: 20px;font-size: 15px;width: 100%;float:none"]').text();
+        const viewsAndDate = $('p[style="font-size: 13px;line-height: 14px;margin: 3px 0px;"]').text();
+        const img = $('div.thm img').attr('src');
+        const synopsis = $('div.konten h2').text();
+        const details = $('div.konten h3').text();
+        const downloadLinks = [];
+        $('div.liner').each((_i, e) => {
+            const quality = $(e).find('div.name').text();
+            const links = [];
+            $(e).find('a').each((_j, link) => {
+                links.push($(link).attr('href'));
+            });
+            downloadLinks.push({ quality, links });
+        });
+
+        const result = {
+            title: title,
+            viewsAndDate: viewsAndDate,
+            img: img,
+            synopsis: synopsis,
+            details: details,
             downloadLinks: downloadLinks
         };
 
