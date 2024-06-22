@@ -42,7 +42,7 @@ nekobocc.release()
 ```
 
 ## Results
-- **HentaiRelease**
+- **Release Result**
 ```js
 [
     {
@@ -66,7 +66,7 @@ nekobocc.release()
     ...
 ]
 ```
-- **NekoPoiLatest**
+- **Latest Result**
 ```js
 [
     {
@@ -84,7 +84,7 @@ nekobocc.release()
     ...
 ]
 ```
-- **EpisodeMetadata**
+- **Get Detail Episode**
 ```js
 {
     img: 'https://nekopoi.care/wp-content/uploads/2023/01/vlcsnap-2023-01-01-03h58m25s923-300x169.png',
@@ -108,7 +108,7 @@ nekobocc.release()
 }
 ```
 
-- **HentaiMetadata**
+- **Hentai Get Detail Series**
 ```js
 {
     img: 'https://nekopoi.care/wp-content/uploads/2021/07/MakochanKaihatsuNikkiep69538176cde48c8e3ebb65761cb63504-213x300.jpg',
@@ -130,6 +130,127 @@ nekobocc.release()
         'https://nekopoi.care/mako-chan-kaihatsu-nikki-episode-3-subtitle-indonesia/',
         'https://nekopoi.care/mako-chan-kaihatsu-nikki-episode-4-subtitle-indonesia/'
     ]
+}
+```
+
+- **Preview New Add JAV Detail**
+```js
+{
+  "title": "[JAV COSPLAY] NCYF-030 Cosplayer Ikuhara Maeno Gangbang 5 Orang!",
+  "viewsAndDate": "Dilihat 26 kali / Friday, June 21st, 2024",
+  "img": "https://nekopoi.care/wp-content/uploads/2024/06/ncyf030pl-300x202.jpg",
+  "producers": "NCYF",
+  "artist": "Ikuhara Moeno",
+  "genre": "Cosplay, Creampie, Blowjob, Gangbang",
+  "duration": "184 menit",
+  "downloadLinks": [
+    {
+      "quality": "[JAV COSPLAY] NCYF-030 Cosplayer Ikuhara Maeno Gangbang 5 Orang! [720p]",
+      "links": [
+        "https://linkpoi.me/X6I2CmAd",
+        "https://linkpoi.me/NryzzBbb",
+        "https://linkpoi.me/tzTVg",
+        "https://ouo.io/13iZSQ"
+      ]
+    },
+    {
+      "quality": "[JAV COSPLAY] NCYF-030 Cosplayer Ikuhara Maeno Gangbang 5 Orang! [480p]",
+      "links": [
+        "https://linkpoi.me/qFzBTk",
+        "https://linkpoi.me/ewJDL",
+        "https://linkpoi.me/3bNQ7ti",
+        "https://ouo.io/w0g0Wfy"
+      ]
+    },
+    {
+      "quality": "[JAV COSPLAY] NCYF-030 Cosplayer Ikuhara Maeno Gangbang 5 Orang! [360p]",
+      "links": [
+        "https://linkpoi.me/O7sCc8rr",
+        "https://linkpoi.me/d4pgBZ",
+        "https://linkpoi.me/IX1g7",
+        "https://ouo.io/xs48fT"
+      ]
+    }
+  ]
+}
+```
+
+- **Preview New Add 3D Detail**
+```js
+{
+  "title": "[3D] Tsunade Futa Hard Big Tits 3D – By VLDstudio",
+  "viewsAndDate": "Dilihat 35 kali / Friday, June 21st, 2024",
+  "img": "https://nekopoi.care/wp-content/uploads/2024/06/vlcsnap-2024-06-21-15h19m40s135-300x169.png",
+  "parody": "Naruto 3D",
+  "producers": "VLDstudio",
+  "duration": "5 menit 48 detik",
+  "sizes": "360P : 33mb  |  480P : 62mb  |  720P : 124mb |  1080P : 166mb",
+  "downloadLinks": [
+    {
+      "quality": "[3D] Tsunade Futa Hard Big Tits 3D – By VLDstudio [1080p]",
+      "links": [
+        "https://linkpoi.me/2S9NX1c8",
+        "https://linkpoi.me/pmmnkpR",
+        "https://linkpoi.me/Fk5gfTrY",
+        "https://linkpoi.me/b7fP8T",
+        "https://ouo.io/NbEBwgk"
+      ]
+    },
+    {
+      "quality": "[3D] Tsunade Futa Hard Big Tits 3D – By VLDstudio [720p]",
+      "links": [
+        "https://linkpoi.me/WsLEDlw",
+        "https://linkpoi.me/6m2kd5DW",
+        "https://linkpoi.me/K3kWTns",
+        "https://linkpoi.me/MTgzgX",
+        "https://ouo.io/tzJJQ7"
+      ]
+    },
+    {
+      "quality": "[3D] Tsunade Futa Hard Big Tits 3D – By VLDstudio [480p]",
+      "links": [
+        "https://linkpoi.me/tayb",
+        "https://linkpoi.me/EfCiX",
+        "https://linkpoi.me/kiTl9",
+        "https://linkpoi.me/87tIm",
+        "https://ouo.io/8oTs1rf"
+      ]
+    },
+    {
+      "quality": "[3D] Tsunade Futa Hard Big Tits 3D – By VLDstudio [360p]",
+      "links": [
+        "https://linkpoi.me/qpM8Lhk",
+        "https://linkpoi.me/nZMdkFrd",
+        "https://linkpoi.me/dLkPlx",
+        "https://linkpoi.me/gHyjt",
+        "https://ouo.io/EbXfs0m"
+      ]
+    }
+  ]
+}
+```
+
+
+- **Preview New Add PV Detail**
+```js
+{
+  "title": "[PV] Natsu ga Owaru Made Natsu no Owari Subtitle Indonesia",
+  "viewsAndDate": "Dilihat 70 kali / Friday, June 21st, 2024",
+  "img": "https://nekopoi.care/wp-content/uploads/2024/06/vlcsnap-2024-06-21-11h07m43s543-300x169.png",
+  "synopsis": "Ini adalah preview / cuplikan hentai yang akan datang dengan subtitle indonesia",
+  "details": "Judul: Natsu ga Owaru Made Natsu no Owari Episode 1\nLabel: Showten\nTanggal Rilis: 28 Juni 2024",
+  "downloadLinks": [
+    {
+      "quality": "[PV] Natsu ga Owaru Made Natsu no Owari Subtitle Indonesia [480p]",
+      "links": [
+        "https://linkpoi.me/aoStp",
+        "https://linkpoi.me/DJLd1S",
+        "https://linkpoi.me/XLEH6",
+        "https://linkpoi.me/5ktWuW",
+        "https://ouo.io/TQTtSa"
+      ]
+    }
+  ]
 }
 ```
 
